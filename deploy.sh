@@ -1,27 +1,16 @@
 #!/usr/bin/env sh
-
-# 發生錯誤時執行終止指令
+# 當發生錯誤時終止腳本運行
 set -e
-
-# 打包編譯
+# 打包
 npm run build
-
-# 移動到打包資料夾下，若你有調整的話打包後的資料夾請務必調整
+# 移動至到打包後的dist目錄 
 cd dist
-
-# 部署到自定義網域
-# echo 'www.example.com' > CNAME
-
 git init
 git add -A
 git commit -m 'deploy'
-
-# 部署到 https://<USERNAME>.github.io
-git push -f git@github.com:notte/backoffice.git master
-
-# 部署到 https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
-# 以這個專案來講就要改成這樣以下這樣
-# git push -f git@github.com:notte/backoffice.git master:gh-pages
+# 部署到 https://github.com/chou0728/eric-project.git 分支為 gh-pages
+git push -f https://github.com/notte/backoffice.git master:gh-pages
 
 cd -
+
+# git push -f git@github.com:notte/backoffice.git master
