@@ -5,6 +5,9 @@
 		"object-literal-sort-keys": false
 	},
 	"rules": {
+		"vue/no-parsing-error": [2, {
+			"x-invalid-end-tag": false
+		}],
 		"max-line-length": [true, 100],
 		"interface-name": false,
 		"max-line-length": {
