@@ -24,9 +24,9 @@ module.exports = {
 			},
 		},
 	},
-	configureWebpack: {
-		output: {
-			publicPath: '/'
-		},
-	}
+	// configureWebpack: {
+	// 	output: {
+	// 		publicPath: '/'
+	// 	},
+	// }
 };
